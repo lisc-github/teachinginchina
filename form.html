@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" media="screen and (min-device-width:640px)" href="css/form.css">
+    <link rel="stylesheet" media="screen and (max-device-width:640px)" href="css/form_mobile.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--[if IE]>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="css/form.css">
+    <![endif]-->
+    <script src="js/form.js"></script>
+    <script src="js/select_comp.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/placeholder.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="nav">
+        <div class="nav_box">
+            <div class="left">
+                <a href="http://www.teachinginchina.org">
+                    <div class="logo"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="img">
+        <div class="photo">
+            <span><i class="fa fa-user"></i></span>
+        </div>
+        <div class="name">
+            <p>user name</p>
+        </div>
+    </div>
+    <div class="form">
+        <p class="notice">Be sure to fill in the options with *</p>
+        <form action="" id="apply_form">
+            <div class="box">
+                <div class="l_box need">
+                    <input type="text" name="firstName" placeholder="FirstName"><span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="r_box need">
+                    <input type="text" name="middleName" placeholder="MiddleName"><span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="l_box need">
+                    <input type="text" name="lastName" placeholder="LastName"><span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="r_box">
+                    <input type="text" name="nickName" placeholder="NickName(if difference)">
+                    <p class="info"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <p class="title">Date of Birth</p>
+            <div class="box birth">
+                <div class="i_box need">
+                    <div class="select select1">
+                        <input type="text" placeholder="MM" class="select_ipt select_ipt1">
+                    </div>
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="j_box need">
+                    <div class="select select2">
+                        <input type="text" placeholder="DD" class="select_ipt select_ipt2">
+                    </div>
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="k_box need">
+                    <div class="select select3">
+                        <input type="text" placeholder="YYYY" class="select_ipt select_ipt3">
+                    </div>
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="_box">
+                    <b style="float:left">Gender:</b><span class="red _red">*</span>
+                    <input type="radio" id="male" name="sex" checked><label for="male" style="float:left">Male</label>
+                    <input type="radio" id="female" name="sex"><label style="float:left" for="female">Female</label>
+                    <p class="info"></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_ need">
+                    <input type="text" name="Email" placeholder="Email"><span class="red"></span>
+                    <p class="info"></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_ need">
+                    <input type="text" name="Address" placeholder="Address"><span class="red"></span>
+                    <p class="info"></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="i_box need">
+                    <input type="text" name="city" placeholder="City">
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="j_box need">
+                    <input type="text" name="state" placeholder="State">
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="k_box need">
+                    <input type="text" name="country" placeholder="Country">
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="l_box need">
+                    <input type="text" name="postal_code" placeholder="Zip/Postal Code"><span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="r_box need">
+                    <input type="text" name="mobile_phone" placeholder="Mobile Phone"><span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="i_box need">
+                    <input type="text" name="phone1" placeholder="Home Phone1">
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="j_box">
+                    <input type="text" name="phone2" placeholder="Home Phone2">
+                    <p class="info"></p>
+                </div>
+                <div class="k_box need">
+                    <input type="text" name="major" placeholder="Major">
+                    <span class="red"></span>
+                    <p class="info"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="_box">
+                    <div class="_box">
+                        <b style="float:left">Highest Degree Earned:</b><span class="red _red">*</span>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Associate" name="Degree" checked><label for="Associate" style="float:left">Associate Degree</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="B.A" name="Degree"><label style="float:left" for="B.A">B.A (Bachelor of Arts)</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="B.S" name="Degree"><label style="float:left" for="B.S">B.S (Bachelor of Science )</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="M.S" name="Degree"><label style="float:left" for="M.S">M.S (Master of Science )</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="M.A" name="Degree"><label style="float:left" for="M.A">M.A (Master of Arts )</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Doctor" name="Degree"><label style="float:left" for="Doctor">Doctor's Degree</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Other" name="Degree"><label style="float:left" for="Other">Other Degree</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="text" id="Other_degree" name="Other_degree" placeholder="type your degree" disabled>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p class="info"></p>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="_box">
+                    <div class="_box">
+                        <b style="float:left">Your Program Choice:</b><span class="red _red">*</span>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="One_year" name="Program_Choice" checked><label for="One_year" style="float:left">One year program</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Two_semesters" name="Program_Choice"><label style="float:left" for="Two_semesters">Two semesters program</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="One_semester" name="Program_Choice"><label style="float:left" for="One_semester">One semester program</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Half_year" name="Program_Choice"><label style="float:left" for="Half_year">Half year program</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Weeks" name="Program_Choice"><label style="float:left" for="Weeks">Weeks program</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="Flexible" name="Program_Choice"><label style="float:left" for="Flexible">Flexible program</label>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p class="info"></p>
+            </div>
+            <div class="clear"></div>
+            <div class="box">
+                <div class="_box">
+                    <div class="_box">
+                        <b style="float:left">Your School Choice:</b><span class="red _red">*</span>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="middle_schools" name="School_Choice" checked><label for="middle_schools" style="float:left">at middle schools</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="colleges" name="School_Choice"><label style="float:left" for="colleges">at colleges</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="elementary_schools" name="School_Choice"><label style="float:left" for="elementary_schools">at elementary schools</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="pre_schools" name="School_Choice"><label style="float:left" for="pre_schools">at pre-schools</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="training_schools" name="School_Choice"><label style="float:left" for="training_schools">at english language training schools</label>
+                    </div>
+                    <div class="z_box">
+                        <input type="radio" id="all" name="School_Choice"><label style="float:left" for="all">all</label>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p class="info"></p>
+            </div>
+            <div class="clear"></div>
+            <div class="submit">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="footer">
+    <div class="box">
+        <p>© 2017 by www.teachinginchina.org</p>
+    </div>
+</div>
+</body>
+</html>

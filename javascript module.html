@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var module1 = (function(){
+            var _count = 0;
+            var m1 = function(){
+                console.log(1)
+            };
+            var m2 = function(){
+                console.log(2)
+            };
+            return {
+                m1 : m1,
+                m2 : m2
+            };
+        })();
+        module1 = (function(mod){
+            if(!module1.m3){
+                mod.m3 = function(){
+                    console.log(3)
+                };
+            }
+            return mod;
+        })(window.module1||{});
+        module1.m3();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            border:1px solid #ccc;
+            padding:20px;
+        }
+        ul{
+
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="text">
+<button>添加</button>
+<div class="box">
+    <ul>
+
+    </ul>
+</div>
+<input type="radio" class="change" name="hehe">what
+<input type="radio" class="change" name="hehe">the
+
+<script>
+    var input = document.getElementById("text");
+    var add = document.getElementsByTagName("button")[0];
+    var box = document.getElementsByClassName("box")[0];
+    var ul = document.getElementsByTagName("ul")[0];
+    add.onclick = function () {
+        var text = input.value;
+        var Li = document.createElement("li");
+        var Button = document.createElement("button");
+        Button.innerHTML = "删除";
+        Button.setAttribute("class","delete");
+        Button.style.marginLeft = "30px";
+        Li.innerText = text;
+        Li.appendChild(Button);
+        ul.appendChild(Li);
+        input.value = "";
+        var _delete = document.getElementsByClassName("delete");
+        for(var i=0;i<_delete.length;i++){
+            _delete[i].onclick = function () {
+                this.parentNode.parentNode.removeChild(this.parentNode);
+            }
+        }
+    };
+
+    var ipt = document.getElementsByClassName("change")[0];
+    ipt.onfocus = function(){
+       console.log(112)
+    }
+    ipt.onblur = function(){
+        console.log(118)
+    }
+    ipt.click();
+
+</script>
+</body>
+</html>

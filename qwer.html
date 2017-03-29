@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function f(n) {
+            if(n<31){
+                var arr = [];
+                var count = 0;
+                for(var i=0;i<n;i++){
+                    count = parseInt(Math.random()*30+2);
+                    if(arr.indexOf(count)==-1){
+                        arr.push(count);
+                    }
+                    else{
+                        i=i-1;
+                    }
+                }
+                return arr;
+            }
+            else{
+                alert("数字太大")
+            }
+
+        }
+        console.log(f(30));
+
+        function Person(name) {
+            this.name = name;
+            var obj = {constructor:Person,age:24};
+            Person.prototype = obj;
+        }
+        var p1 = new Person("hehe");
+        console.log(p1.__proto__);
+        var arr = new Array();
+        console.log(arr.__proto__ == Array.prototype);
+        console.log(Object.keys(p1));
+        console.log(Object.getOwnPropertyNames(p1));
+        console.log(p1.age);
+
+
+        //寄生组合式继承
+        function object(o){
+            function F(){
+
+            }
+            F.prototype = o;
+            return new F();
+        }
+        function Supertype(name){
+            this.name = name;
+            this.color = ["red"];
+        }
+        Supertype.prototype.sayname = function () {
+            console.log(this.name);
+        };
+        function Sub(name) {
+            Supertype.call(this,name);
+        }
+
+        function inheritType(sub,supertype){
+            var prototype = object(Supertype.prototype);
+            sub.constructor = supertype;
+            sub.prototype = prototype;
+        }
+        inheritType(Sub,Supertype);
+        var sub = new Sub("Tom");
+        console.log(sub.color);
+        sub.sayname();
+    </script>
+</head>
+<body>
+<script>
+    var x = {};
+    x.method = (function(){
+            console.log(1);
+            return 2;
+        })();
+    x.method = (function(){
+            console.log(3);
+            return 4;
+        })();
+    var t = x.method;
+    console.log(t);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
