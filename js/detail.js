@@ -1,6 +1,7 @@
 $(window).ready(readyHandler);
 function readyHandler() {
     (function(){
+
         var detailContent = $(".detail_content");
         var detailCover = $(".detail_cover");
         var bannerText = $(".header .home");
@@ -76,29 +77,76 @@ function readyHandler() {
 
         //detail点击阻止页面滚动
         var detailBtn = $(".detail_btn");
-
+        var scrollH;
         detailBtn.each(function(){
-            $(this).on("click",function(){
-                $(this).parent().next().fadeIn();
-                $(window).bind("mousewheel",function(e){
-                    if (e.preventDefault) e.preventDefault();
-                    else e.returnValue = false;
-                });
-                detailContent.on("click",function(e){
-                    if(e.stopPropagation) e.stopPropagation();
-                    else e.cancelBubble();
-                });
-                detailContent.on("mousewheel",function (e) {
-                    if (e.stopPropagation) e.stopPropagation();
-                    else e.cancelBubble = true;
-                });
-                detailCover.on("click",function(){
-                    $(this).fadeOut();
-                    $(window).unbind("mousewheel");
-                })
-            });
-        });
+            if(!document.documentMode||document.documentMode>7) {
+                $(this).on("click", function () {
+                    scrollH = document.body.scrollTop || document.documentElement.scrollTop;
+                    var h1 = document.body.clientHeight;
+                    var h2 = document.body.scrollHeight;
+                    var scrollBar = $("<div></div>");
+                    var content = $("<div></div>");
+                    if (navigator.userAgent.indexOf("Firefox") > -1) {
+                        scrollBar.css({
+                            'position': 'fixed',
+                            'right': 0,
+                            "width": '17px',
+                            top: 0,
+                            bottom: 0,
+                            overflowY: 'scroll'
+                        });
+                    }
+                    else {
+                        scrollBar.css({
+                            'position': 'fixed',
+                            'right': 0,
+                            "width": '17px',
+                            top: 0,
+                            bottom: '-17px',
+                            overflowY: 'scroll'
+                        });
+                    }
 
+                    content.css({"height": h1 + 'px', width: '17px'});
+                    scrollBar.append(content);
+                    body.append(scrollBar);
+                    console.log(h1, h2);
+                    $(this).parent().next().fadeIn();
+                    body.css({"position": "fixed", left: 0, right: "17px", top: -scrollH + 'px'});
+                    $(".nav").css("right", "17px");
+                    detailCover.on("click", function () {
+                        $(this).hide();
+                        body.css({"position": "relative", top: 0});
+                        $("html,body").animate({"scrollTop": scrollH + 'px'}, 0);
+                        $(".nav").css("right", "0");
+                        scrollBar.remove();
+                    })
+
+
+                });
+            }
+            else{
+                $(this).on("click", function () {
+                    $(this).parent().next().fadeIn();
+                    $("body").on("mousewheel",function(e){
+                        e.cancelBubble = true;
+                        window.event.returnValue = false;
+                    })
+                });
+                detailCover.on("click", function () {
+                    $(this).hide();
+                    $("body").on("mousewheel",function(e){
+                        window.event.returnValue = true;
+                    })
+                });
+            }
+        });
+        detailContent.on("click",function(e){
+            if(e.stopPropagation)
+                e.stopPropagation();
+            else
+                window.event.cancelBubble = true;
+        })
 
 
 
