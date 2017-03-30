@@ -110,7 +110,6 @@ function readyHandler() {
                     content.css({"height": h1 + 'px', width: '17px'});
                     scrollBar.append(content);
                     body.append(scrollBar);
-                    console.log(h1, h2);
                     $(this).parent().next().fadeIn();
                     body.css({"position": "fixed", left: 0, right: "17px", top: -scrollH + 'px'});
                     $(".nav").css("right", "17px");
@@ -128,16 +127,9 @@ function readyHandler() {
             else{
                 $(this).on("click", function () {
                     $(this).parent().next().fadeIn();
-                    $("body").on("mousewheel",function(e){
-                        e.cancelBubble = true;
-                        window.event.returnValue = false;
-                    })
                 });
                 detailCover.on("click", function () {
                     $(this).hide();
-                    $("body").on("mousewheel",function(e){
-                        window.event.returnValue = true;
-                    })
                 });
             }
         });

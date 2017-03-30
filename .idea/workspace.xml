@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df27b0b2-3200-484c-8743-724a2fc26830" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/detail.js" afterPath="$PROJECT_DIR$/js/detail.js" />
     </list>
     <ignored path="teaching in china.iws" />
@@ -28,7 +26,7 @@
       <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="1155">
               <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#b#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -74,7 +72,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="357">
               <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
@@ -124,13 +122,13 @@
       <file leaf-file-name="detail.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="131" column="46" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
+            <state relative-caret-position="2394">
+              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
-                <marker date="1490861344785" expanded="true" signature="1449:1453" ph="&lt;" />
-                <marker date="1490861344785" expanded="true" signature="1459:1463" ph="&gt;" />
-                <marker date="1490861344785" expanded="true" signature="2362:2366" ph="&lt;" />
-                <marker date="1490861344785" expanded="true" signature="2372:2376" ph="&gt;" />
+                <marker date="1490861797374" expanded="true" signature="1449:1453" ph="&lt;" />
+                <marker date="1490861797374" expanded="true" signature="1459:1463" ph="&gt;" />
+                <marker date="1490861797374" expanded="true" signature="2362:2366" ph="&lt;" />
+                <marker date="1490861797374" expanded="true" signature="2372:2376" ph="&gt;" />
               </folding>
             </state>
           </provider>
@@ -139,7 +137,7 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="1974">
               <caret line="94" column="30" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="30" />
               <folding />
             </state>
@@ -264,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,7 +298,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,13 +310,13 @@
     <property name="last_opened_file_path" value="E:/my-alert" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\teaching in china\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\teaching in china\css" />
       <recent name="E:\teaching in china\js" />
       <recent name="E:\teaching in china" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\teaching in china\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -396,17 +394,18 @@
       <workItem from="1490749049033" duration="8498000" />
       <workItem from="1490759193293" duration="3182000" />
       <workItem from="1490843549672" duration="12294000" />
+      <workItem from="1490861544059" duration="254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400240000" />
+    <option name="totallyTimeSpent" value="400494000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16738197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1695279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -743,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
+        <state relative-caret-position="1974">
           <caret line="94" column="30" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="30" />
           <folding />
         </state>
@@ -751,7 +750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="1155">
           <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#b#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -785,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="357">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
@@ -793,13 +792,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="131" column="46" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
+        <state relative-caret-position="2394">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
-            <marker date="1490861344785" expanded="true" signature="1449:1453" ph="&lt;" />
-            <marker date="1490861344785" expanded="true" signature="1459:1463" ph="&gt;" />
-            <marker date="1490861344785" expanded="true" signature="2362:2366" ph="&lt;" />
-            <marker date="1490861344785" expanded="true" signature="2372:2376" ph="&gt;" />
+            <marker date="1490861797374" expanded="true" signature="1449:1453" ph="&lt;" />
+            <marker date="1490861797374" expanded="true" signature="1459:1463" ph="&gt;" />
+            <marker date="1490861797374" expanded="true" signature="2362:2366" ph="&lt;" />
+            <marker date="1490861797374" expanded="true" signature="2372:2376" ph="&gt;" />
           </folding>
         </state>
       </provider>
