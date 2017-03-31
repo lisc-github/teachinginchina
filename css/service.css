@@ -88,7 +88,7 @@ body {
       color: #fff; }
 
 .main {
-  padding: 26px 0 60px; }
+  padding: 26px 0 120px; }
   .main .box {
     width: 1096px;
     margin: 0 auto;
@@ -101,6 +101,7 @@ body {
     .main .box p {
       font-size: 14px;
       margin-bottom: 10px;
+      padding:0 1%;
       line-height: 32px; }
       .main .box p b {
         font-weight: 600;
@@ -137,7 +138,7 @@ body {
     width: 75%; }
 
   .nav .nav_box {
-    width: 75%; }
+    width: 73%; }
 
   .header .home .home_box {
     width: 75%; }

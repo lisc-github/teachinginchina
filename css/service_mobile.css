@@ -14,7 +14,7 @@ body {
 
 .nav {
   z-index: 99999;
-  position: fixed;
+  /*position: fixed;*/
   left: 0;
   right: 0;
   top: 0;
@@ -80,7 +80,7 @@ body {
   .header .home {
     position: absolute;
     width: 100%;
-    top: 58%; }
+    top: 50%; }
     .header .home .home_box {
       width: 80%;
       margin: 0 auto; }

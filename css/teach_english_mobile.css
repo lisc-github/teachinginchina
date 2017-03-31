@@ -111,4 +111,84 @@
     .main .box .sample .school .no_border {
       border-bottom: none; }
 
-/*# sourceMappingURL=teach_english_mobile.css.map */
+.main .box .time{
+  overflow:hidden;
+  margin-top:20px;
+}
+.main .box h2{
+  margin-bottom:20px;
+  padding:0 1%;
+}
+.main .box .time .time_box{
+  float: left;
+  width:100%;
+  height:180px;
+  margin:3% 0;
+  background:#fff;
+  overflow:hidden;
+  -webkit-transition: box-shadow 1.2s;
+  -moz-transition: box-shadow 1.2s;
+  -ms-transition: box-shadow 1.2s;
+  -o-transition: box-shadow 1.2s;
+  transition: box-shadow 1.2s;
+}
+.main .box .time .time_box:hover{
+  -webkit-box-shadow: 0 0 20px 1px #00a2ca;
+  -moz-box-shadow: 0 0 20px 1px #00a2ca;
+  box-shadow: 0 0 20px 1px #00a2ca;
+}
+.main .box .time .time_box .top{
+  height:120px;
+  background:#ebebec;
+  padding:0 8%;
+  overflow:hidden;
+}
+.main .box .time .time_box .top h4{
+  margin-top:30px;
+  text-align:center;
+  font-weight:100;
+  font-size: 16px;
+  color:#333;
+}
+.main .box .time .time_box .top p{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:#666;
+}
+.main .box .time .time_box .bottom{
+  height:60px;
+  text-align: center;
+  line-height:60px;
+}
+.main .box .time .time_box .bottom a{
+  text-decoration:none;
+  color:#fff;
+  background: #00a2ca;
+  font-size: 14px;
+  padding:4px 20px;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s;
+}
+.main .box .time .time_box .bottom a:hover{
+  background: #51cbff;
+}
+.main .box .position{
+  margin-top:40px;
+}
+.main .box .position p a{
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-decoration:none;
+  color:#333;
+}
+.main .box .position p a:hover{
+  color:#51cbff;
+  cursor:pointer;
+}

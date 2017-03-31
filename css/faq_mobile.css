@@ -14,7 +14,6 @@ body {
 
 .nav {
   z-index: 99999;
-  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -94,7 +93,7 @@ body {
     width: 54.8rem;
     margin: 0 auto; }
     .main .box h2 {
-      font-size: 20px;
+      font-size: 0.9rem;
       margin: 22px 0 6px;
       font-weight: 400;
       color: #009BD7; }
