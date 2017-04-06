@@ -6,9 +6,9 @@
     margin: 1%;
     padding: 1%;
     background: #fff;
-    -webkit-box-shadow: 0 0 4px 2px #ddd;
-    -moz-box-shadow: 0 0 4px 2px #ddd;
-    box-shadow: 0 0 4px 2px #ddd; }
+    -webkit-box-shadow: 0 0 0 1px #ddd;
+    -moz-box-shadow: 0 0 0 1px #ddd;
+    box-shadow: 0 0 0 1px #ddd; }
     .main .box .english .teach_point .title {
       height: 34px;
       border-bottom: 1px solid #eee;
@@ -198,7 +198,11 @@
   cursor:pointer;
 }
 
-
+@media \0screen\,screen\9{
+  body{
+    min-width:1096px;
+  }
+}
 
 
 

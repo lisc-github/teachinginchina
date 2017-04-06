@@ -14,7 +14,9 @@ body {
     height: 100%;
     overflow: hidden; }
     body .bg_pic img {
-      width: 100%; }
+      width: 100%;
+      min-height:1000px;
+      min-width:2000px;}
   body .nav {
     z-index: 99999;
     position: fixed;
@@ -25,7 +27,6 @@ body {
     height: 80px;
     background: rgba(0, 0, 0, 0.7); }
     body .nav .nav_box {
-      width: 1096px;
       margin: 0 auto;
       overflow: hidden;
       height: 100%; }
@@ -49,13 +50,13 @@ body {
             color: #fff;
             font-size: 14px; }
   body .shell {
-    width: 1000px;
     position: absolute;
     height: 500px;
+    width:650px;
     top: 50%;
     left: 50%;
     margin-top: -250px;
-    margin-left: -500px; }
+    margin-left: -325px; }
     body .shell .welcome {
       text-align: center;
       color: #fff; }
@@ -188,9 +189,6 @@ body {
       color: #999;
       font-size: 14px; }
 
-@media screen and (max-width: 1300px) {
-  body .bg_pic img {
-    height: 100%;
-    width: auto; } }
+
 
 /*# sourceMappingURL=login.css.map */

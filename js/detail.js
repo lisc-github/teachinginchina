@@ -86,11 +86,12 @@ function readyHandler() {
                     var h2 = document.body.scrollHeight;
                     var scrollBar = $("<div></div>");
                     var content = $("<div></div>");
+                    var barWidth = getViewSizeWithScrollbar().width -getViewSizeWithoutScrollbar().width ;
                     if (navigator.userAgent.indexOf("Firefox") > -1) {
                         scrollBar.css({
                             'position': 'fixed',
                             'right': 0,
-                            "width": '17px',
+                            "width": barWidth,
                             top: 0,
                             bottom: 0,
                             overflowY: 'scroll'
@@ -100,7 +101,7 @@ function readyHandler() {
                         scrollBar.css({
                             'position': 'fixed',
                             'right': 0,
-                            "width": '17px',
+                            "width":  barWidth,
                             top: 0,
                             bottom: '-17px',
                             overflowY: 'scroll'
@@ -111,7 +112,7 @@ function readyHandler() {
                     scrollBar.append(content);
                     body.append(scrollBar);
                     $(this).parent().next().fadeIn();
-                    body.css({"position": "fixed", left: 0, right: "17px", top: -scrollH + 'px'});
+                    body.css({"position": "fixed", left: 0, right: barWidth, top: -scrollH + 'px'});
                     $(".nav").css("right", "17px");
                     detailCover.on("click", function () {
                         $(this).hide();
@@ -138,11 +139,31 @@ function readyHandler() {
                 e.stopPropagation();
             else
                 window.event.cancelBubble = true;
-        })
+        });
 
 
 
+        //获取窗口宽度 包括或不包括滚动条
+        function getViewSizeWithoutScrollbar(){//不包含滚动条
+            return {
+                width : document.documentElement.clientWidth,
+                height: document.documentElement.clientHeight
+            }
+        }
+        function getViewSizeWithScrollbar(){//包含滚动条
+            if(window.innerWidth){
+                return {
+                    width : window.innerWidth,
+                    height: window.innerHeight
+                }
+            }else{
+                return {
+                    width : document.documentElement.offsetWidth,
+                    height: document.documentElement.offsetHeight
+                }
+            }
 
+        }
 
 
 

@@ -134,6 +134,12 @@ body {
 .sample .school ._box .content {
     border-top: 1px solid red;
     padding: 1rem 0.6rem 4rem; }
+
+.sample .school ._box .content img{
+    width:100%;
+    float: left;
+    margin-bottom:6px;
+}
 .sample .school ._box .content p{
     line-height: 30px;
     font-size: 0.65rem;

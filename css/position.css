@@ -159,6 +159,13 @@ body {
     color: #999;
     font-size: 14px; }
 
+
+@media \0screen\,screen\9{
+    body{
+        min-width:1000px;
+    }
+}
+
 @media screen and (max-width:1400px){
     .sample,.nav .nav_box,.header .home .home_box{
         width:70%;

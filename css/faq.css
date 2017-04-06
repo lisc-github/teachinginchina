@@ -14,11 +14,6 @@ body {
 
 .nav {
   z-index: 99999;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   height: 80px;
   background: rgba(0, 0, 0, 0.7); }
   .nav .nav_box {
@@ -47,7 +42,7 @@ body {
           font-size: 14px; }
 
 .header {
-  height: 420px;
+  height: 240px;
   overflow: hidden;
   position: relative;
   z-index: 100; }
@@ -68,14 +63,7 @@ body {
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.4); }
-    @media \0screen\,screen \9 {
-      .header .banner .cover {
-        background: #000;
-        filter: Alpha(Opacity=40); } }
-  @media \0screen\,screen \9 {
-    .header .nav {
-      background: #000;
-      filter: Alpha(Opacity=70); } }
+
   .header .home {
     position: absolute;
     width: 100%;
@@ -131,7 +119,19 @@ body {
       text-align: center;
       color: #999;
       font-size: 14px; }
-
+@media \0screen\,screen\9{
+  body{
+    min-width:1096px;
+  }
+  .header .banner .cover {
+     background: #000;
+     filter: Alpha(Opacity=40);
+  }
+  .nav {
+    background: #000;
+    filter: Alpha(Opacity=70);
+  }
+}
 @media screen and (max-width: 1400px) {
   .main .box {
     width: 75%; }

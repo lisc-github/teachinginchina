@@ -37,14 +37,7 @@ h1 {
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.4); }
-    @media \0screen\,screen\9 {
-      .header .banner .cover {
-        background: #000;
-        filter: Alpha(Opacity=40); } }
-  @media \0screen\,screen\9 {
-    .header .nav {
-      background: #000;
-      filter: Alpha(Opacity=70); } }
+
   .header .nav {
     z-index: 99999;
     position: fixed;
@@ -91,13 +84,7 @@ h1 {
           width: 16.6%;
           font-size: 0.8rem;
           text-align: center;
-          -webkit-transition: color ease-in .3s;
-          -moz-transition: color ease-in .3s;
-          -ms-transition: color ease-in .3s;
-          -o-transition: color ease-in .3s;
-          transition: color ease-in .3s; }
-        .header .nav .nav_box .right a:hover {
-          color: #55acee; }
+         }
         .header .nav .nav_box .right .active {
           color: #55acee; }
   .header .home {
@@ -147,7 +134,6 @@ h1 {
     margin-left: -2.5rem;
     margin-top: -2.5rem;
     opacity: 0;
-    *filter: Alpha(Opacity=0);
     z-index: -99999; }
     .header .login_box .close, .header .sign_box .close {
       width: 1.5rem;
@@ -226,7 +212,7 @@ h1 {
         position: relative;
         float: left;
         width: 31.33%;
-        margin: 1%;
+        margin: 2% 1%;
         -webkit-box-shadow: 2px 2px 2px 2px #000;
         -moz-box-shadow: 2px 2px 2px 2px #000;
         box-shadow: 1px 1px 4px 1px #ccc; }
@@ -253,9 +239,6 @@ h1 {
             -webkit-line-clamp: 2;
             display: -webkit-box;
             -webkit-box-orient: vertical; }
-        @media \0screen\,screen\9 {
-          .program .box .all_programs .each .detail {
-            background: #05eaf7; } }
         .program .box .all_programs .each .detail {
           display: none;
           background: rgba(5, 234, 247, 0.95);
@@ -293,9 +276,10 @@ h1 {
       width: 54.8rem;
       overflow: hidden; }
       .service .content .box .serv {
+        background:#fff;
         float: left;
         width: 31%;
-        margin: 1% 1%;
+        margin: 2% 1%;
         padding: 0.7rem 0 2rem;
         cursor: pointer;
         position: relative;
@@ -320,12 +304,6 @@ h1 {
           width: 5rem;
           left: 0;
           bottom: 4px; }
-      .service .content .box .serv:hover {
-        -webkit-box-shadow: 0 1px 16px 2px #ccc;
-        -moz-box-shadow: 0 1px 16px 2px #ccc;
-        box-shadow: 0 1px 16px 2px #ccc;
-        margin-top: -10px;
-        background: #fff; }
 
 .about {
   overflow: hidden;
@@ -368,10 +346,6 @@ h1 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.41); }
-  @media \0screen\,screen\9 {
-    .FAQ .about_pic .cover {
-      background: #000;
-      filter: Alpha(Opacity=40); } }
   .FAQ .content {
     position: absolute;
     z-index: 10;
@@ -429,8 +403,6 @@ h1 {
             left: 0;
             right: 0;
             border: 1px solid red; }
-        .FAQ .content .box .especial_box .each_faq:hover {
-          margin-top: -1.8%; }
 
 .contact {
   background: #fff;
@@ -649,4 +621,3 @@ h1 {
   .FAQ .content .box .especial_box {
     margin-top: 0.6rem; } }
 
-/*# sourceMappingURL=index_mobile.css.map */

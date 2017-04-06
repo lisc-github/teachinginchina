@@ -406,16 +406,24 @@ function readyHandler() {
         //首页的加载动画效果
 
         //---------------------------------------------------
-        var move = item.find(".move");
-        setTimeout(function () {
-            item.each(function(){
-                var start_height = $(this).height();
-                $(this).css("height",parseInt(start_height));
-                move.each(function(){
-                    $(this).fadeOut();
+        item.eq(0).find(".move").each(function(){
+            $(this).hide();
+        });
+        changeHeight();
+        function changeHeight(){
+            setTimeout(function () {
+                item.each(function(i){
+                    if(i>0){
+                        var start_height = $(this).height();
+                        $(this).css("height",parseInt(start_height));
+                        item.eq(i).find(".move").each(function(){
+                            $(this).fadeOut();
+                        });
+                    }
                 });
-            });
-        },200);//safari下的兼容
+            },200);//safari下的兼容
+        }
+
         moveTo(item.eq(0),1,0);
         $(window).on("scroll",function () {
             var h = $(window).scrollTop();

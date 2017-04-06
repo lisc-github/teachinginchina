@@ -60,6 +60,7 @@ body {
         color: #fff; }
     .main .img .name {
       text-align: center;
+      font-size:16px;
       line-height: 40px; }
   .main .form {
     border: 1px solid #ddd;
@@ -195,6 +196,13 @@ body {
 
 .clear {
   clear: both; }
+
+
+@media \0screen\,screen\9{
+  body{
+    min-width:1096px;
+  }
+}
 
 @media screen and (max-width: 1400px) {
   .main, .header .nav .nav_box, .footer .box {

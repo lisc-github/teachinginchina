@@ -220,7 +220,7 @@ h1 {
 
 .item h1 {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #333; }
 
 .program {
@@ -526,7 +526,7 @@ h1 {
         .contact .content .box .right .return_info {
           clear: both;
           color: red;
-          font-size: 16px; }
+          font-size: 13px; }
 
 .footer {
   height: 100px;
@@ -542,6 +542,14 @@ h1 {
 
 .placeholder {
   color: #aaa; }
+
+@media \0screen\,screen\9{
+  body{
+    min-width:1096px;
+  }
+}
+
+
 
 @media screen and (max-width: 1500px) {
   .header .banner img {
@@ -627,4 +635,3 @@ h1 {
   body {
     width: 533px; } }
 
-/*# sourceMappingURL=index.css.map */
