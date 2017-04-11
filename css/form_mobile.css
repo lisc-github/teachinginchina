@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
     overflow: hidden;
     height: 100%;
-    width: 92%; }
+    width: 80%; }
     .header .nav .nav_box a {
       overflow: hidden;
       float: left;
@@ -40,7 +40,8 @@ body {
     background: #fff; }
   .main b {
     color: #555;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+  line-height: 28px}
   .main .img {
     width: 100%;
     margin-right: 2%;

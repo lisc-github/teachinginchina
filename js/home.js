@@ -101,25 +101,28 @@ function readyHandler() {
         //programs hover 的效果
 
         //----------------------------------------------------------
-        each_program.each(function () {
-            $(this).hover(
-                function () {
-                    clearTimeout(timer);
-                    var _this = $(this);
-                    timer = setTimeout(function () {
-                        _this.find(".detail").fadeIn();
-                    },200)
-                },
-                function () {
-                    clearTimeout(timer);
-                    var _this = $(this);
-                    setTimeout(function () {
-                        _this.find(".detail").fadeOut();
-                    },250)
+        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            each_program.each(function () {
+                $(this).hover(
+                    function () {
+                        clearTimeout(timer);
+                        var _this = $(this);
+                        timer = setTimeout(function () {
+                            _this.find(".detail").fadeIn();
+                        },200)
+                    },
+                    function () {
+                        clearTimeout(timer);
+                        var _this = $(this);
+                        setTimeout(function () {
+                            _this.find(".detail").fadeOut();
+                        },250)
 
-                }
-            );
-        });
+                    }
+                );
+            });
+        }
+
 
 
 
@@ -133,22 +136,36 @@ function readyHandler() {
 
         //----------------------------------------------------------
         login.on("click",function () {
-            login_box.css("z-index",1000);
-            if(parseInt(header.css('width'))<650){
-                login_box.animate({opacity:"0.96",width:"96%",height:'13.6rem',marginTop:"-6.8rem",marginLeft:"-48%"});
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                window.location = "login.html";
             }
             else{
-                login_box.animate({opacity:"0.96",width:"600px",height:'346px',marginTop:"-173px",marginLeft:"-300px"});
+                login_box.css("z-index",1000);
+                if(parseInt(header.css('width'))<650){
+                    login_box.animate({opacity:"0.96",width:"96%",height:'13.6rem',marginTop:"-6.8rem",marginLeft:"-48%"});
+                }
+                else{
+                    login_box.animate({opacity:"0.96",width:"600px",height:'346px',marginTop:"-173px",marginLeft:"-300px"});
+                }
+                clickHandler2();
             }
+
         });
         sign_up.on("click",function () {
-            sign_box.css("z-index",1000);
-            if(parseInt(header.css('width'))<650){
-                sign_box.animate({opacity:"0.96",width:"96%",height:'20rem',marginTop:"-9rem",marginLeft:"-48%"});
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                window.location = "login.html#sign";
             }
             else{
-                sign_box.animate({opacity:"0.96",width:"600px",height:'450px',marginTop:"-225px",marginLeft:"-300px"});
+                sign_box.css("z-index",1000);
+                if(parseInt(header.css('width'))<650){
+                    sign_box.animate({opacity:"0.96",width:"96%",height:'20rem',marginTop:"-9rem",marginLeft:"-48%"});
+                }
+                else{
+                    sign_box.animate({opacity:"0.96",width:"600px",height:'450px',marginTop:"-225px",marginLeft:"-300px"});
+                }
+                clickHandler1();
             }
+
         });
 
         //----------------------------------------------------------
@@ -156,7 +173,9 @@ function readyHandler() {
         //关闭登录注册框
 
         //----------------------------------------------------------
-        close1.on("click",function(){
+        close1.on("click",clickHandler1);
+        close2.on("click",clickHandler2);
+        function clickHandler1(){
             login_box.animate({opacity:"0",width:"100px",height:'100px',marginTop:"-50px",marginLeft:"-50px"},function(){
                 $(this).css({"z-index":-99999});
             });
@@ -172,8 +191,8 @@ function readyHandler() {
                     s.val(pValue).addClass("placeholder");
                 }
             })
-        });
-        close2.on("click",function(){
+        }
+        function clickHandler2(){
             sign_box.animate({opacity:"0",width:"100px",height:'100px',marginTop:"-50px",marginLeft:"-50px"},function(){
                 $(this).css({"z-index":-99999});
             });
@@ -189,8 +208,7 @@ function readyHandler() {
                     s.val(pValue).addClass("placeholder");
                 }
             })
-        });
-
+        }
         //判断是否支持placeholder
         function isPlaceholder() {
             var input = document.createElement('input');
@@ -347,8 +365,6 @@ function readyHandler() {
         //邮箱验证
         function reg(str){
             return (/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/).test(str);
-
-
         }
 
         //点击注册切换到注册框

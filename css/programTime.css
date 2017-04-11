@@ -89,7 +89,7 @@ body {
 }
 .sub_nav .fa-list-ul{
     height:100%;
-    width:50px;
+    width:60px;
     float: left;
     line-height:50px;
     font-size: 30px;
@@ -196,7 +196,7 @@ body {
     margin-bottom:10px;
 }
 .time .time_box h4{
-    color: #64990b;
+    color: #55acee;
     font-weight: 100;
     margin-bottom:6px;
 }
@@ -253,8 +253,11 @@ body {
     }
 }
 @media screen and (max-width:700px) {
-    .nav .nav_box,.time .time_box,.footer .box,.header .home .home_box{
+    .time .time_box,.footer .box,.header .home .home_box{
         width:90%;
+    }
+    .nav .nav_box{
+        width:80%;
     }
     .time .time_box .content .left,.time .time_box .content .right{
         width:100%;

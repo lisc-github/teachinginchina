@@ -40,7 +40,7 @@ h1 {
 
   .header .nav {
     z-index: 99999;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -113,16 +113,18 @@ h1 {
           overflow: hidden;
           margin: 0 auto; }
           .header .home .home_box .login .box a {
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 0;
             border: 1px solid #ccc;
-            width: 7.4rem;
             text-align: center;
             color: #fff;
             text-decoration: none; }
           .header .home .home_box .login .box .a1 {
+            box-sizing:border-box;
+            width: 100%;
             float: left; }
           .header .home .home_box .login .box .a2 {
-            float: right; }
+            display:none!important;
+          }
   .header .login_box, .header .sign_box {
     overflow: hidden;
     position: absolute;
@@ -212,7 +214,7 @@ h1 {
         position: relative;
         float: left;
         width: 31.33%;
-        margin: 2% 1%;
+        margin: 2% 0;
         -webkit-box-shadow: 2px 2px 2px 2px #000;
         -moz-box-shadow: 2px 2px 2px 2px #000;
         box-shadow: 1px 1px 4px 1px #ccc; }
@@ -240,8 +242,8 @@ h1 {
             display: -webkit-box;
             -webkit-box-orient: vertical; }
         .program .box .all_programs .each .detail {
-          display: none;
-          background: rgba(5, 234, 247, 0.95);
+          display: block;
+          background: rgba(5, 234, 247, 0);
           cursor: pointer;
           position: absolute;
           left: 0;
@@ -279,7 +281,7 @@ h1 {
         background:#fff;
         float: left;
         width: 31%;
-        margin: 2% 1%;
+        margin: 2% 0;
         padding: 0.7rem 0 2rem;
         cursor: pointer;
         position: relative;
@@ -366,7 +368,7 @@ h1 {
         float: left;
         width: 31.33%;
         height: 10rem;
-        margin: 1.2% 1%; }
+        margin: 1.2% 0; }
         .FAQ .content .box .especial_box a {
           text-decoration: none; }
         .FAQ .content .box .especial_box .each_faq {
@@ -509,7 +511,7 @@ h1 {
     width: auto; } }
 @media screen and (max-width: 1200px) {
   .header .nav .nav_box {
-    width: 92%; }
+    width: 80%; }
 
   .header .home .home_box {
     width: 80%; }
@@ -601,8 +603,6 @@ h1 {
   .header .login_box .row input[type='submit'], .header .sign_box .row input[type='submit'] {
     height: 1.7rem; }
 
-  .header .home .home_box .login .box a {
-    padding: 0.3rem 1rem; }
 
   .header .login_box .row .feedback, .header .sign_box .row .feedback {
     font-size: 0.56rem;

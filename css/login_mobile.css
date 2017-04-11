@@ -17,7 +17,7 @@ body {
       height: 100%; }
   body .nav {
     z-index: 99999;
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     right: 0;
     top: 0;
@@ -70,7 +70,7 @@ body {
       top: 50%;
       left: 50%;
       margin-left: -50%;
-      margin-top: -9rem;
+      margin-top: -12rem;
       overflow: hidden; }
     body .shell #login, body .shell #sign, body .shell #reset_password {
       z-index: 100;
@@ -83,7 +83,7 @@ body {
       left: 0;
       top: 0;
       background: rgba(0, 0, 0, 0.6);
-      *filter: Alpha(Opacity=0); }
+    }
     body .shell #sign {
       left: 100%; }
     body .shell #reset_password {
@@ -111,9 +111,9 @@ body {
             background: #ccc;
             color: #fff; }
         body .shell .login .row_box input, body .shell .sign .row_box input, body .shell .reset_password .row_box input {
-          font-size: 0.7rem;
+          font-size: 0.6rem;
           float: left;
-          height: 1.3rem;
+          height: 1.2rem;
           width: 90%;
           padding: 0.3rem 0 0.3rem 2.9rem;
           border: 1px solid #ccc;
@@ -145,7 +145,7 @@ body {
           cursor: pointer; }
         body .shell .login .row_box .code_img, body .shell .sign .row_box .code_img, body .shell .reset_password .row_box .code_img {
           border: 1px solid #ccc;
-          height: 1.9rem;
+          height: 1.8rem;
           position: absolute;
           right: 0;
           left: 56%; }

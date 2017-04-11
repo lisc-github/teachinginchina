@@ -166,9 +166,52 @@ function readyHandler() {
         }
 
 
+        var letter = $(".main .box .letter");
+        var box = $(".main .box");
+        var letterTop = letter.offset().top;
+        var form = $("form");
 
+        $(window).on("scroll",scrollAndResize);
+        $(window).on("resize",scrollAndResize);
 
+        function scrollAndResize(){
+            if($(window).width()>1000){
+                var distance = box.offset().left;
+                var w = box.width()*0.3;
+                if($(window).scrollTop()>letterTop){
+                    letter.addClass("fix");
+                    letter.css({"right":distance,"width":w});
+                }
+                else{
+                    letter.removeClass("fix");
+                    letter.css({"width":"30%"})
+                }
+            }
+            else{
+                letter.removeClass("fix");
+                letter.css({"width":"100%"})
+            }
+        }
 
+        form.submit(submitHandler);
+        function submitHandler(){
+            return check();
+            function check(){
+                var content = $("input[type='text']").val();
+                if(!test(content)){
+                    $(".info").text("Please enter the correct email address");
+                    return false;
+                }
+                alert("We will send a message later");
+            }
+        }
+        $("input[type='text']").on("keydown",function () {
+            $(".info").text("");
+        })
+
+        function test(str){
+            return (/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/).test(str);
+        }
 
 
 

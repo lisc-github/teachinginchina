@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Microsoft YaHei" !important; }
+  font-family: "Microsoft YaHei"; }
 
 html {
   font-size: 20px; }
@@ -18,7 +18,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  height: 80px;
+  height: 4rem;
   background: rgba(0, 0, 0, 0.7); }
   .nav .nav_box {
     width: 1096px;
@@ -46,7 +46,7 @@ body {
           font-size: 14px; }
 
 .header {
-  height: 21rem;
+  height: 12rem;
   overflow: hidden;
   position: relative;
   z-index: 100; }
@@ -67,14 +67,6 @@ body {
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.4); }
-    @media \0screen\,screen \9 {
-      .header .banner .cover {
-        background: #000;
-        filter: Alpha(Opacity=40); } }
-  @media \0screen\,screen \9 {
-    .header .nav {
-      background: #000;
-      filter: Alpha(Opacity=70); } }
   .header .home {
     position: absolute;
     width: 100%;
@@ -85,7 +77,7 @@ body {
     .header .home h1 {
       text-align: center;
       color: #fff;
-      font-size: 40px; }
+      font-size: 1.6rem; }
 
 .main {
   padding: 26px 0 60px; }
@@ -110,7 +102,62 @@ body {
       font-size: 14px;
       line-height: 24px;
       list-style-type: inherit; }
+.main .box .right .title{
+  padding-left:20px;
+  background:#966d3f;
+  height:40px;
+}
+.main .box .right .title span{
+  line-height: 40px;
+  float: left;
+  width:40px;
+  height:40px;
+}
+.main .box .right .title h3{
+  height:40px;
+  line-height:40px;
+  font-size: 20px;
+}
+.main .box .right .title .fa-envelope{
+  font-size: 24px;
+  color:#fff;
+}
+.main .box .right .container{
+  padding:30px 0 20px 20px;
+  background:#fff;
+}
+.main .box .right .container span{
+  font-size:14px;
+}
+.main .box .right .container form input[type='text']{
+  width:80%;
+  height:28px;
+  margin-top:4px;
+  padding-left:12px;
+}
+.main .box .right .container form input[type='submit'] {
+  width:80px;
+  display:block;
+  margin-top:10px;
+  height:28px;
+  background:#966d3f;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+}
 
+.main .box .right .container form .info{
+  height:12px;
+  display:block;
+  margin-top:6px;
+  font-size: 12px;
+  color:red;
+  font-weight: 300;
+}
+.fix{
+  position:fixed;
+  top:0;
+}
 .footer {
   height: 5rem;
   background: #eee; }
@@ -140,7 +187,7 @@ body {
     width: 94%; }
 
   .nav .nav_box {
-    width: 92%;
+    width: 80%;
     height: 100%; }
 
   .nav .nav_box .left {

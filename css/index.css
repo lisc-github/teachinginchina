@@ -337,11 +337,10 @@ h1 {
         -moz-box-shadow: 0 1px 16px 2px #ccc;
         box-shadow: 0 1px 16px 2px #ccc;
         margin-top: -10px;
-        margin-top: 1% \9\0;
         background: #fff; }
       @media \0screen\,screen\9 {
         .service .content .box .serv:hover {
-          margin-top: 1% \9; } }
+          margin-top: 1%; } }
 
 .about {
   overflow: hidden;

@@ -88,6 +88,9 @@ function readyHandler(){
                     $(this)._parent('need').find('.info').text('Please type the '+$(this).attr('placeholder'));
                 }
             });
+            if(!f){
+                alert("Please fill in the required content");
+            }
             return f;
         }
     }
