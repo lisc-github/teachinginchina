@@ -3,7 +3,7 @@
     padding:0;
 }
 html {
-    font-family: 微软雅黑;
+    font-family:"Microsoft YaHei";
     font-size: 16px !important; }
 
 html, body {
@@ -192,7 +192,7 @@ body {
 }
 .time .time_box h3{
     font-weight: 100;
-    color: #64990b;
+    color: #333;
     margin-bottom:10px;
 }
 .time .time_box h4{

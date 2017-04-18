@@ -1,6 +1,8 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family:"Microsoft YaHei";
+}
 
 html {
   font-size: 20px !important; }
@@ -150,6 +152,7 @@ body {
             margin-left: 0; }
           .main .form .box ._box .z_box input[type='text'] {
             height: 20px;
+            line-height: 20px;
             width: 70%; }
         .main .form .box ._box input[type='radio'] {
           margin-left: 20px; }
@@ -174,6 +177,35 @@ body {
         background: #64990b;
         color: #fff; }
 
+#li-radioComp-male,#li-radioComp-female,#li-radioComp-Associate,#li-radioComp-BA,#li-radioComp-BS,#li-radioComp-MS,#li-radioComp-MA,
+#li-radioComp-Doctor,#li-radioComp-Other,#li-radioComp-One_year,#li-radioComp-Two_semesters,#li-radioComp-One_semester,#li-radioComp-Half_year,
+#li-radioComp-Weeks,#li-radioComp-Flexible,#li-radioComp-middle_schools,#li-radioComp-colleges,#li-radioComp-elementary_schools,
+#li-radioComp-pre_schools,#li-radioComp-training_schools,#li-radioComp-all{
+  width:21px;
+  height:21px;
+  position:relative;
+  float: left;
+  display:table-cell;
+  vertical-align: middle;
+  overflow-y:hidden;
+}
+#li-radioComp-male,#li-radioComp-female{
+  margin-left:10px;
+}
+
+
+form .name{
+  float: left;
+  height: 21px !important;
+  line-height:21px;
+  font-size: 14px;
+  margin-left:4px;
+  color:#555;
+}
+input::-webkit-input-placeholder {
+  color: #aab2bd;
+  font-size: 12px;
+}
 .placeholder {
   color: #aaa;
   line-height: 26px; }

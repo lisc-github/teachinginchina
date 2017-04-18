@@ -34,7 +34,7 @@
                 for(var i=0;i<arr.length;i++){
                     var li = $("<li></li>");
                     li.text(arr[i]);
-                    li.css({'list-style':'none','background':'#fff','padding':'0 0 0 12px'});
+                    li.css({'list-style':'none','background':'#fff','padding':'0 0 0 12px',fontSize:"14px"});
                     li.addClass('opt');
                     ul.append(li);
                 }
@@ -45,6 +45,7 @@
                 var flag = false;
                 var li = opt.children(0).children();
                 input.click(function(){
+                    console.log(1)
                     if(!flag){
                         opt.css('display','block');
                         flag = true;

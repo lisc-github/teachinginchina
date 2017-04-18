@@ -13,6 +13,7 @@
     <script src="js/jquery-1.7.2.min.js"></script>
     <link rel="stylesheet" href="css/form.css">
     <![endif]-->
+    <script src="components/radioComp.js"></script>
     <script src="js/form.js"></script>
     <script src="js/select_comp.js"></script>
     <script src="js/jquery.easing.js"></script>
@@ -70,21 +71,21 @@
             <div class="box birth">
                 <div class="i_box need">
                     <div class="select select1">
-                        <input type="text" placeholder="MM" class="select_ipt select_ipt1">
+                        <input type="text" placeholder="MM" class="select_ipt select_ipt1" readonly="readonly">
                     </div>
                     <span class="red"></span>
                     <p class="info"></p>
                 </div>
                 <div class="j_box need">
                     <div class="select select2">
-                        <input type="text" placeholder="DD" class="select_ipt select_ipt2">
+                        <input type="text" placeholder="DD" class="select_ipt select_ipt2" readonly="readonly">
                     </div>
                     <span class="red"></span>
                     <p class="info"></p>
                 </div>
                 <div class="k_box need">
                     <div class="select select3">
-                        <input type="text" placeholder="YYYY" class="select_ipt select_ipt3">
+                        <input type="text" placeholder="YYYY" class="select_ipt select_ipt3" readonly="readonly">
                     </div>
                     <span class="red"></span>
                     <p class="info"></p>
@@ -95,9 +96,12 @@
             <div class="box">
                 <div class="_box">
                     <b style="float:left">Gender:</b><span class="red _red">*</span>
-                    <input type="radio" id="male" name="sex" checked><label for="male" style="float:left">Male</label>
-                    <input type="radio" id="female" name="sex"><label style="float:left" for="female">Female</label>
-                    <p class="info"></p>
+                    <span>
+                        <span id="li-radioComp-male"></span><span class="name">Male</span>
+                    </span>
+                    <span>
+                        <span id="li-radioComp-female"></span><span class="name">Female</span>
+                    </span>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -171,25 +175,39 @@
                         <b style="float:left">Highest Degree Earned:</b><span class="red _red">*</span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Associate" name="Degree" checked><label for="Associate" style="float:left">Associate Degree</label>
+                        <span>
+                            <span id="li-radioComp-Associate"></span><span class="name">Associate Degree</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="B.A" name="Degree"><label style="float:left" for="B.A">B.A (Bachelor of Arts)</label>
+                        <span>
+                            <span id="li-radioComp-BA"></span><span class="name">B.A (Bachelor of Arts)</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="B.S" name="Degree"><label style="float:left" for="B.S">B.S (Bachelor of Science )</label>
+                        <span>
+                            <span id="li-radioComp-BS"></span><span class="name">B.S (Bachelor of Science )</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="M.S" name="Degree"><label style="float:left" for="M.S">M.S (Master of Science )</label>
+                         <span>
+                            <span id="li-radioComp-MS"></span><span class="name">M.S (Master of Science )</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="M.A" name="Degree"><label style="float:left" for="M.A">M.A (Master of Arts )</label>
+                        <span>
+                            <span id="li-radioComp-MA"></span><span class="name">M.A (Master of Arts )</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Doctor" name="Degree"><label style="float:left" for="Doctor">Doctor's Degree</label>
+                        <span>
+                            <span id="li-radioComp-Doctor"></span><span class="name">Doctor's Degree</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Other" name="Degree"><label style="float:left" for="Other">Other Degree</label>
+                         <span>
+                            <span id="li-radioComp-Other"></span><span class="name">Other Degree</span>
+                        </span>
                     </div>
                     <div class="z_box">
                         <input type="text" id="Other_degree" name="Other_degree" placeholder="type your degree" disabled>
@@ -205,22 +223,34 @@
                         <b style="float:left">Your Program Choice:</b><span class="red _red">*</span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="One_year" name="Program_Choice" checked><label for="One_year" style="float:left">One year program</label>
+                         <span>
+                            <span id="li-radioComp-One_year"></span><span class="name">One year program</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Two_semesters" name="Program_Choice"><label style="float:left" for="Two_semesters">Two semesters program</label>
+                         <span>
+                            <span id="li-radioComp-Two_semesters"></span><span class="name">Two semesters program</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="One_semester" name="Program_Choice"><label style="float:left" for="One_semester">One semester program</label>
+                         <span>
+                            <span id="li-radioComp-One_semester"></span><span class="name">One semester program</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Half_year" name="Program_Choice"><label style="float:left" for="Half_year">Half year program</label>
+                         <span>
+                            <span id="li-radioComp-Half_year"></span><span class="name">Half year program</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Weeks" name="Program_Choice"><label style="float:left" for="Weeks">Weeks program</label>
+                         <span>
+                            <span id="li-radioComp-Weeks"></span><span class="name">Weeks program</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="Flexible" name="Program_Choice"><label style="float:left" for="Flexible">Flexible program</label>
+                         <span>
+                            <span id="li-radioComp-Flexible"></span><span class="name">Flexible program</span>
+                        </span>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -233,22 +263,35 @@
                         <b style="float:left">Your School Choice:</b><span class="red _red">*</span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="middle_schools" name="School_Choice" checked><label for="middle_schools" style="float:left">at middle schools</label>
+                        <span>
+                            <span id="li-radioComp-middle_schools"></span><span class="name">at middle schools</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="colleges" name="School_Choice"><label style="float:left" for="colleges">at colleges</label>
+
+                        <span>
+                            <span id="li-radioComp-colleges"></span><span class="name">at colleges</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="elementary_schools" name="School_Choice"><label style="float:left" for="elementary_schools">at elementary schools</label>
+                        <span>
+                            <span id="li-radioComp-elementary_schools"></span><span class="name">at elementary schools</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="pre_schools" name="School_Choice"><label style="float:left" for="pre_schools">at pre-schools</label>
+                        <span>
+                            <span id="li-radioComp-pre_schools"></span><span class="name">at pre-schools</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="training_schools" name="School_Choice"><label style="float:left" for="training_schools">at english language training schools</label>
+                        <span>
+                            <span id="li-radioComp-training_schools"></span><span class="name">at english language training schools</span>
+                        </span>
                     </div>
                     <div class="z_box">
-                        <input type="radio" id="all" name="School_Choice"><label style="float:left" for="all">all</label>
+                        <span>
+                            <span id="li-radioComp-all"></span><span class="name">all</span>
+                        </span>
                     </div>
                     <div class="clear"></div>
                 </div>

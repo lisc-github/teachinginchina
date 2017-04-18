@@ -1,6 +1,8 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family:"Microsoft YaHei";
+}
 
 html {
   font-size: 20px; }
@@ -89,8 +91,8 @@ body {
     body .shell #reset_password {
       top: -100%; }
     body .shell .login, body .shell .sign, body .shell .reset_password {
-      width: 96%;
-      margin-left: 2%; }
+      width: 92%;
+      margin-left: 4%; }
       body .shell .login .row_box, body .shell .sign .row_box, body .shell .reset_password .row_box {
         overflow: hidden;
         position: relative; }

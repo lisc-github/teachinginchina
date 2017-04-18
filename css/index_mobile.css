@@ -98,15 +98,18 @@ h1 {
       margin: 0 auto; }
       .header .home .home_box h1 {
         text-align: center;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         color: #fff;
         margin-bottom: 0 !important; }
+      .header .home .home_box .teaching{
+        font-size: 1.9rem;
+      }
       .header .home .home_box p {
         color: #fff;
         font-size: 1rem;
-        margin-top: 2rem; }
+        margin-top: 1rem; }
       .header .home .home_box .login {
-        margin-top: 3rem;
+        margin-top: 2rem;
         overflow: hidden; }
         .header .home .home_box .login .box {
           width: 20.6rem;
@@ -582,9 +585,6 @@ h1 {
   .contact .content .box .right {
     width: 100%; } }
 @media screen and (max-device-width: 640px) {
-  .header .home .home_box h1 {
-    font-size: 2.1rem; }
-
   .header .home .home_box .login .box {
     width: 14.2rem; }
 
