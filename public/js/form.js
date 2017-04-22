@@ -72,6 +72,14 @@ function readyHandler(){
     var year_select = createSelect(".select3",".select_ipt3",arr2);
 
 
+
+
+
+
+
+
+
+
     /**
      * 表单提交前的验证
      */

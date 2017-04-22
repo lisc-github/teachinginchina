@@ -9,6 +9,7 @@
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/home.js"></script>
     <script src="js/placeholder.js"></script>
+    <script src="components/select_comp.js"></script>
     <!--[if IE]>
     <link rel="stylesheet" href="css/index.css">
     <![endif]-->
@@ -309,21 +310,39 @@
     <div class="content">
         <div class="box">
             <h1 class="move">Contact us</h1>
-            <div class="left">
-                <p class="move">Have any questions, Contact us.Summer Schedule: Monday - Friday: 2:00 PM - 10:00 PM EST.Other time,please leave a message,with your name,email address and reason to call.We'll get back to you as soon as possible.</p>
-                <p class="icon move">South Hall 217, 219</p>
-                <p class="icon move">136 Lafayette Street</p>
-                <p class="icon move">University of Bridgeport</p>
-                <p class="icon move">Bridgeport, CT 06604</p>
-                <p class="icon move">E-mail: info@uschinaedu.org</p>
-                <p class="icon move">Tel: 203.576.6709</p>
-            </div>
             <div class="right">
                 <form action="" id="message_form">
-                    <input type="text" name="name" placeholder="Name" class="move">
-                    <input type="text" name="email" placeholder="Email" class="move">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="move"></textarea>
-                    <input type="submit" value="SEND" class="move">
+                    <div class="move ipt_box">
+                        <label for="name"><span class="red">*</span>FirstName</label><input type="text" name="name" id="name">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <label for="lastname"><span class="red">*</span>LastName</label><input type="text" name="lastName" id="lastname">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <label for="email"><span class="red">*</span>Email</label><input type="text" name="email" id="email">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <label for="phone">Phone Number</label><input type="text" name="phone" id="phone">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <label for="interest"><span class="red">*</span>Area of interest</label><input type="text" name="interest" id="interest">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <label for="location"><span class="red">*</span>Your Current Location</label><div id="select"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <label for="message"><span class="red">*</span>Comments</label><textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="move ipt_box">
+                        <input type="submit" value="SEND">
+                    </div>
                     <p class="return_info">&nbsp;</p>
                 </form>
             </div>
@@ -335,5 +354,9 @@
         <p>© 2017 by www.teachinginchina.org</p>
     </div>
 </div>
+<script>
+    var select = createSelect({h:'42',name:"location",readonly:"readonly",option:['United States','China','Others']});
+    document.getElementById('select').appendChild(select);
+</script>
 </body>
 </html>

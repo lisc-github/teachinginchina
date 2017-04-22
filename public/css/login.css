@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 20px; }
+  font-size: 20px !important; }
 
 body {
   width: 100%;
@@ -16,109 +16,110 @@ body {
     height: 100%;
     overflow: hidden; }
     body .bg_pic img {
-      height: 100%; }
+      width: 100%;
+      min-height:1000px;
+      min-width:2000px;}
   body .nav {
     z-index: 99999;
-    /*position: fixed;*/
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    height: 4rem;
-    background: rgba(0, 0, 0, 0.7); }
+    height: 80px;
+    background: #000; }
     body .nav .nav_box {
-      width: 100%;
+      width:70%;
       margin: 0 auto;
       overflow: hidden;
-      height: 100%;
-      text-align: center; }
+      height: 100%; }
       body .nav .nav_box a {
         overflow: hidden;
         float: left;
         width: 100%;
         height: 100%; }
       body .nav .nav_box .left {
-        margin: 0 auto;
-        width: 92%;
+        float: left;
+        width: 300px;
         height: 100%; }
         body .nav .nav_box .left .logo {
           height: 100%;
           width: 100%;
           background: url("../img/logo.png") center no-repeat;
-          background-size: 100%;
           overflow: hidden; }
           body .nav .nav_box .left .logo .link {
-            margin-top: 1.9rem;
+            margin-top: 38px;
             text-align: center;
             color: #fff;
-            font-size: 0.7rem; }
+            font-size: 14px; }
   body .shell {
-    width: 100%;
     position: absolute;
-    height: 25rem;
+    height: 500px;
+    width:70%;
     top: 50%;
     left: 50%;
-    margin-top: -12.5rem;
-    margin-left: -50%; }
+    margin-top: -250px;
+    margin-left: -35%; }
     body .shell .welcome {
-      width: 100%;
       text-align: center;
-      color: #fff;
-      display: none; }
+      color: #fff; }
     body .shell .login_sign {
       position: absolute;
-      width: 100%;
-      height: 20.5rem;
+      width: 400px;
+      height: 410px;
       top: 50%;
       left: 50%;
-      margin-left: -50%;
-      margin-top: -12rem;
+      z-index: 9999;
+      margin-left: -200px;
+      margin-top: -170px;
       overflow: hidden; }
     body .shell #login, body .shell #sign, body .shell #reset_password {
       z-index: 100;
       overflow: hidden;
-      padding-top: 2.5rem;
+      padding-top: 60px;
       position: absolute;
-      width: 96%;
-      margin-left: 2%;
-      height: 18rem;
+      width: 100%;
+      height: 350px;
       left: 0;
       top: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
+      background: rgba(0, 0, 0, 0.6); }
+    @media \0screen\,screen\9 {
+      body .shell #login, body .shell #sign, body .shell #reset_password {
+        background: #000;
+        filter: Alpha(Opacity=60); } }
     body .shell #sign {
       left: 100%; }
     body .shell #reset_password {
       top: -100%; }
     body .shell .login, body .shell .sign, body .shell .reset_password {
-      width: 92%;
-      margin-left: 4%; }
+      width: 340px;
+      margin-left: 30px; }
       body .shell .login .row_box, body .shell .sign .row_box, body .shell .reset_password .row_box {
         overflow: hidden;
         position: relative; }
         body .shell .login .row_box span, body .shell .sign .row_box span, body .shell .reset_password .row_box span {
           position: absolute;
-          width: 16%;
-          height: 2rem;
+          width: 40px;
+          height: 40px;
           overflow: hidden;
           left: 0;
           top: 0; }
           body .shell .login .row_box span i, body .shell .sign .row_box span i, body .shell .reset_password .row_box span i {
-            height: 2rem;
-            width: 2rem;
+            height: 40px;
+            width: 40px;
             float: left;
-            font-size: 1.2rem;
+            font-size: 24px;
             text-align: center;
-            line-height: 2rem;
+            line-height: 40px;
             background: #ccc;
             color: #fff; }
         body .shell .login .row_box input, body .shell .sign .row_box input, body .shell .reset_password .row_box input {
-          font-size: 0.6rem;
           float: left;
-          height: 1.2rem;
-          width: 90%;
-          padding: 0.3rem 0 0.3rem 2.9rem;
+          height: 26px;
+          width: 280px;
+          padding: 6px 0 6px 58px;
           border: 1px solid #ccc;
+          line-height: 26px\9;
           background: #fff;
           outline: none;
           -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.075);
@@ -135,62 +136,65 @@ body {
           -moz-box-shadow: 0 0 3px #66afe9;
           box-shadow: 0 0 3px #66afe9; }
         body .shell .login .row_box input[name='l_code'], body .shell .login .row_box input[name='s_code'], body .shell .login .row_box input[name='r_code'], body .shell .sign .row_box input[name='l_code'], body .shell .sign .row_box input[name='s_code'], body .shell .sign .row_box input[name='r_code'], body .shell .reset_password .row_box input[name='l_code'], body .shell .reset_password .row_box input[name='s_code'], body .shell .reset_password .row_box input[name='r_code'] {
-          padding: 0.3rem 0.6rem;
-          width: 46%; }
+          padding: 6px 12px;
+          width: 160px; }
         body .shell .login .row_box input[type='submit'], body .shell .sign .row_box input[type='submit'], body .shell .reset_password .row_box input[type='submit'] {
           background: #fff;
-          width: 30%;
-          height: 1.7rem;
+          width: 120px;
+          height: 34px;
           color: #66afe9;
-          line-height: 0.8rem;
+          line-height: 16px;
           padding: 0;
           cursor: pointer; }
         body .shell .login .row_box .code_img, body .shell .sign .row_box .code_img, body .shell .reset_password .row_box .code_img {
           border: 1px solid #ccc;
-          height: 1.8rem;
+          height: 38px;
           position: absolute;
           right: 0;
           left: 56%; }
         body .shell .login .row_box .get_code, body .shell .sign .row_box .get_code, body .shell .reset_password .row_box .get_code {
-          height: 2rem;
+          height: 40px;
           position: absolute;
           right: 0;
           top: 0;
           left: 56%; }
           body .shell .login .row_box .get_code input, body .shell .sign .row_box .get_code input, body .shell .reset_password .row_box .get_code input {
-            height: 100%;
+            height: 40px;
             width: 100%;
             cursor: pointer;
-            padding: 0;
-            font-size: 0.6rem; }
+            padding: 0; }
       body .shell .login .feedback, body .shell .sign .feedback, body .shell .reset_password .feedback {
         display: block;
-        height: 0.9rem;
-        font-size: 0.65rem;
+        height: 18px;
+        font-size: 13px;
         color: red;
         width: 100%; }
       body .shell .login .last_row, body .shell .sign .last_row, body .shell .reset_password .last_row {
         text-align: right;
-        margin-top: 1.5rem; }
+        margin-top: 30px; }
         body .shell .login .last_row a, body .shell .sign .last_row a, body .shell .reset_password .last_row a {
-          font-size: 0.65rem;
-          padding-left: 0.15rem;
+          font-size: 13px;
+          padding-left: 6px;
           color: #fff; }
 
 .footer {
-  z-index: 9999;
-  height: 3rem;
+  height: 100px;
   width: 100%;
   background: #eee;
   position: fixed;
   bottom: 0; }
   .footer .box {
     margin: 0 auto;
-    width: 100%;
-    line-height: 3rem; }
+    width: 80%;
+    line-height: 100px; }
     .footer .box p {
       text-align: center;
       color: #999;
-      font-size: 0.7rem; }
+      font-size: 14px; }
 
-/*# sourceMappingURL=login_mobile.css.map */
+
+@media screen and (max-width:900px){
+  .welcome h1{
+    display:none;
+  }
+}

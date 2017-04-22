@@ -32,6 +32,9 @@ function readyHandler() {
         var input = feedback.prev().find("input[type='text'],input[type='password']");
         var message_form = $("#message_form");
         var m_name = message_form.find("input[name='name']");
+        var m_lastname = message_form.find("input[name='lastName']");
+        var m_interest = message_form.find("input[name='interest']");
+        var m_location = message_form.find("input[name='location']");
         var m_email = message_form.find("input[name='email']");
         var m_message = message_form.find("textarea[name='message']");
         var return_info = message_form.find(".return_info");
@@ -42,6 +45,7 @@ function readyHandler() {
         var Sign = $("#sign");
         var Reset = $("#reset_password");
         var serv = $(".service .content .box .serv");
+        var faqContent = $(".FAQ .content");
         // 手机端的适配
         var w = document.documentElement.clientWidth;
         var html = $("html");
@@ -101,7 +105,6 @@ function readyHandler() {
         //programs hover 的效果
 
         //----------------------------------------------------------
-        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             each_program.each(function () {
                 $(this).hover(
                     function () {
@@ -121,11 +124,30 @@ function readyHandler() {
                     }
                 );
             });
-        }
 
+        //----------------------------------------------------------
 
+        //登陆时异步获取信息
 
-
+        //----------------------------------------------------------
+        l_userName.on("keyup",function(){
+            // $.ajax({
+            //     type:"post",
+            //     url:"127.0.0.1:8888/login.html",
+            //     data:l_userName.val(),
+            //     success:function(data){
+            //         console.log(data);
+            //     }
+            // })
+            var xhr = new XMLHttpRequest();
+            xhr.open("post","http://127.0.0.1:8888/public/login.html");
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send(l_userName.val());
+        });
 
 
 
@@ -390,7 +412,7 @@ function readyHandler() {
         //------------------------------------------------
         message_form.submit(submitHandler3);
         function submitHandler3() {
-            if(!$.trim(m_name.val())||(m_name.attr("class")&&m_name.attr("class").indexOf('placeholder')!=-1)){
+            if(!$.trim(m_name.val())){
                 return_info.html("Please input your name!");
                 m_name.focus();
                 return false;
@@ -398,9 +420,34 @@ function readyHandler() {
             else{
                 return_info.html("");
             }
-            if(!$.trim(m_email.val())||(m_email.attr("class")&&m_email.attr("class").indexOf('placeholder')!=-1)){
+            if(!$.trim(m_lastname.val())){
+                return_info.html("Please input your lastName!");
+                m_lastname.focus();
+                return false;
+            }
+            else{
+                return_info.html("");
+            }
+            if(!$.trim(m_email.val())){
                 return_info.html("Please input your Email!");
                 m_email.focus();
+                return false;
+            }
+            else{
+                return_info.html("");
+            }
+
+            if(!$.trim(m_interest.val())){
+                return_info.html("Please input your area of interest!");
+                m_interest.focus();
+                return false;
+            }
+            else{
+                return_info.html("");
+            }
+            if(!$.trim(m_location.val())||(m_location.attr("class")&&m_location.attr("class").indexOf('placeholder')!=-1)){
+                return_info.html("Please input your current location!");
+                m_location.focus();
                 return false;
             }
             else{
@@ -462,7 +509,20 @@ function readyHandler() {
             }
         }
 
+        $(window).resize(function(){
+            item.each(function(i){
+                $(this).find(".move").each(function(){
+                    $(this).show();
+                });
+                if(i>0){
+                    $(this).css("height",'auto');
+                }
+                if(i==4){
+                    $(this).css("height",faqContent.outerHeight());
+                }
 
+            })
+        })
 
 
     })()
